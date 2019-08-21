@@ -5,7 +5,7 @@
 
 $xml = [];
 foreach($_GET as $key => $url){
-  $fp = fsockopen($url, 80);
+  $fp = fsockopen(htmlentities($url), 80);
   fputs($fp, "GET / HTTP/1.1\r\n");
   fputs($fp, "Host: {$url}\r\n\r\n");
   $http_response .= fgets($fp, 1128);
