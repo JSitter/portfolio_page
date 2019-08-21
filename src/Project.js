@@ -45,7 +45,7 @@ function Project(props){
             onClick={check_valid}
       />
 
-      {project_status === "online"? "": "Starting Up..."}
+      {project_status === "online"? "gg": "Starting Up..."}
     </div>
   );
 }

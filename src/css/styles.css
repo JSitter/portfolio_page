@@ -114,7 +114,7 @@ footer {
 }
 
 a {
-  transition: 400ms;
+  transition: 100ms;
 }
 
 a:link {
@@ -123,7 +123,7 @@ a:link {
 }
 
 footer a {
-  transition: 400ms;
+  transition: 100ms;
 }
 
 footer a:link {
@@ -158,10 +158,11 @@ footer ul {
 
 h1, h2, h3, h4, h5, h6, h7 {
   font-family: var(--heading-font);
+  margin: 15px 0px;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 4em;
 }
 
 h2 {
@@ -190,7 +191,7 @@ body > section {
   border-radius: 10px;
   padding: 15px;
   font-size: 1.5em;
-  transition: 400ms;
+  transition: 100ms;
 }
 
 .warning {
@@ -218,7 +219,7 @@ table {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  transition: 200ms;
+  transition: 100ms;
   color: rgb(23, 23, 23)
 }
 
@@ -236,13 +237,13 @@ td, th {
   padding: 18px 40px 18px 40px;
   border: 0px;
   margin: 0px;
-  transition: 50ms;
+  transition: 100ms;
 }
 
 .hover:hover {
   color: #adadad;
   transform: translate(0px, -3px);
-  box-shadow: 10px 10px 30px #666;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.6);
 }
 
 th {
@@ -260,6 +261,7 @@ section.sub-footer {
 }
 
 section.sub-footer > h1, section.sub-footer > h2, section.sub-footer > h3,  section.sub-footer > h4, section.sub-footer > h5, section.sub-footer > h6, section.sub-footer > h7{
+  min-width: 600px;
   font-size:1.75em;
   color: #444;
 
@@ -307,13 +309,13 @@ form {
 
 .hero-block{
   display: flex;
-  font-size: 2.5em;
-  width: calc(100% - 120px);
+  font-size: 1.1em;
+  width: calc(100% - 80px);
   min-height: 250px;
   background-color: rgba(23, 23, 23, .2);
-  box-shadow: 0px 10px 15px rgb(221, 221, 221);
-  padding: 60px;
-
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.6);
+  padding: 10px 40px 20px 40px;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -326,7 +328,6 @@ form {
 }
 
 .hamburger-menu{
-
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -344,14 +345,14 @@ form {
   min-width: 350px;
   box-shadow: 0px 11px 16px 0px rgba(0,0,0,0.6);
   z-index: 1;
-  transition: 1s;
+  transition: 100ms;
   border-radius: 8px;
 }
 .hamburger-menu:hover .hamburger-menu-dropdown {
   display: block;
-  transition: 2ms;
+  transition: 100ms;
   right: 0px;
-  transition: 1s;
+  transition: 100ms;
 }
 
 .hamburger-menu-dropdown li {
@@ -368,15 +369,14 @@ form {
 }
 
 article {
-  margin: 70px 0px;
+  margin: 70px auto;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  width: calc(100% - 120px);
   min-height: 250px;
   background-color: rgba(23, 23, 23, .2);
-  box-shadow: 0px 10px 15px rgb(221, 221, 221);
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.6);
   padding: 60px;
-  border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -411,7 +411,6 @@ p {
 }
 
 .panel-overlay-content {
-
   z-index: 10500;
   background-color: #efefef;
   padding: 75px;
@@ -428,23 +427,35 @@ p {
 
 .offline {
   filter: brightness(50%);
+  cursor: wait;
 }
 
+.online{
+  filter: brightness(100%);
+  cursor: pointer;
+}
+.project > p {
+  z-index: 300;
+}
 .project > img {
-  width: 100%;
+  min-width: 100%;
+  min-height:100%;
   height: auto;
   position: absolute;
-  z-index: -300;
+  z-index: 100;
 }
 .project {
   overflow: hidden;
   color: #efefef;
+  z-index: 10;
   font-family: var(--heading-font);
   font-size: 3em;
   position: relative;
-  width: 100%;
+  width: calc(100% + 120px);
+  margin-top: -60px;
+  margin-left: -60px;
   height: 500px;
-  transition: 800ms;
+  transition: 200ms;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -452,12 +463,58 @@ p {
   border-radius: 2px;
 }
 
+.header-color{
+  background-color: rgb(18, 16, 40);
+  color: #efefef;
+}
+
+.color-one{
+  background-color: rgb(134, 3, 20);
+  color: #efefef;
+}
+
+.color-two {
+  background-color: rgb(185, 174, 10);
+  color: #efefef;
+}
+
+.color-three {
+ background-color: rgb(5, 97, 164);
+ color: #efefef;
+}
+
+.color-four {
+  background-color: rgb(29, 45, 70);
+  color: #efefef;
+}
+
 @media only screen and (min-width: 600px) {
   header {
     background-image: url(../images/med-title.jpg);
   }
-}
 
+}
+@media only screen and (min-width: 1200px) {
+  article {
+    flex-direction: row;
+
+  }
+
+  .project {
+    height: calc(100% + 120px);
+    min-width: 700px;
+    border-radius: 0px;
+    margin-right: 40px;
+  }
+
+
+  .project:hover{
+    width: 100%;
+  }
+
+
+
+}
 @media only screen and (min-width: 1366px) {
   header {
     background-image: url(../images/large-title.jpg);
