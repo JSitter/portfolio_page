@@ -27,10 +27,10 @@ function App() {
       <section className="wrapper">
         <h2>Heart Disease Predictor</h2>
         <p>
-        Heart disease is the number one killer of people around the globe. This project explores the UCI Heart Disease Dataset and uses machine learning to predict the occurance of heart disease given data that could be read from an electrocardiogram.
+        Heart disease is the number one killer of people around the globe. This project explores the UCI Heart Disease Dataset and uses machine learning to predict the occurance of heart disease using data that could be read from an electrocardiogram.
         </p>
         <p>
-          Given the non invasive nature of the test inputs, one could surmise that given a high enough accuracy score you may be able to predict the presence of heart disease on a watch one day.
+          Given the non invasive nature of the test inputs, one could surmise that with a high enough accuracy score you may be able to predict the presence of heart disease on a watch one day. Provided it comes with the appropriate sensors.
         </p>
       </section>
       </article>
@@ -43,8 +43,9 @@ function App() {
         />
         <section className="wrapper">
           <h2>Slow Loris</h2>
-          <p>The Javascript game engine Phaser allows for you to make games that work not only on the web, but also using the Electron framework.</p>
+          <p>The Javascript game engine -- Phaser -- allows you to make games that work not only on the web, but also using the Electron framework.</p>
           <p>This project builds the first level in a demonstration game called Slow Loris. Guide the slow loris to the tree and avoid being eaten by the wolves that are wandering the area.</p>
+
         </section>
       </article>
       <article className="color-three">
@@ -56,8 +57,8 @@ function App() {
         />
         <section className="wrapper">
           <h2>Fireworker</h2>
-          <p>Ever had to send a sensitive document through an email? Did you wish there was another way?</p>
-          <p>Email isn't the most secure form of communication. If you wanted to send a document with a social security number on it you would be wise to think twice about how that information travels to your recipient. This project allows you to send a file to someone and know that that information is controlled in a way.</p>
+          <p>Ever had to send a sensitive document through an email? Did you wish there was a more secure way?</p>
+          <p>Email isn't the most secure form of communication. If you wanted to send a document with a social security number on it you would be wise to think twice about how that information travels to your recipient. This project allows you to send a file to someone and know while making certain that someone you don't know doesn't get it as well.</p>
         </section>
       </article>
       <article className="color-four">
