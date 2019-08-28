@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-
+import '../css/Project.css';
 /**
  * 
  * @param {*} props 
- * @var project_status should be: 'offline', or 'online'
+ * @var project_status 
+ * project_status should be: 'offline', 'online'
  * 
  */
 function Project(props){
   const [project_status, setStatus] = useState('offline');
   
-
+  /**
+   * 
+   * @param {url} url of site to check
+   * Check if site is responding
+   */
   let check_project = (url)=>{
     return new Promise((resolve)=>{
       // fetch('./check_project.php?url='+url).then((res)=>resolve(res.text().then((text=>console.log(text)))));
@@ -20,8 +25,7 @@ function Project(props){
 
   const check_valid = function(){
     if(project_status === 'online'){
-      console.log("http://"+props.projectUrls[0]);
-      window.location = "http://"+props.projectUrls[0];
+      window.location = "https://"+props.projectUrls[0];
     }
   }
 
@@ -29,23 +33,19 @@ function Project(props){
     if(project_status === 'offline'){
       let url_responses = props.projectUrls.map((url)=>check_project(url));
       Promise.all(url_responses).then((vals)=>{
-        console.log(vals);
-        console.log("Set status online");
         setStatus('online');
-        console.log("Status set");
       });
     }
   }, [project_status, props.projectUrls]);
 
   return (
     <div className="project hover">
+     <p>{project_status === "online"?"": "Starting Up..."}</p>
       <img  src={props.imgUrl} 
             className={project_status} 
             alt="Heart Disease Predictor"
             onClick={check_valid}
       />
-
-      {project_status === "online"? "gg": "Starting Up..."}
     </div>
   );
 }
