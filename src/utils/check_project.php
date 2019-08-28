@@ -1,6 +1,8 @@
 <?php
 /**
- * This File should be placed in the project directory on the server with all the other
+ * This File should be placed on the production server's
+ * project root directory alongside the other files generated
+ * from `npm run build`
  */
 
 $xml = [];

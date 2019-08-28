@@ -508,8 +508,10 @@ p {
   }
 
 
-  .project:hover{
-    width: 100%;
+  .hover:hover {
+    color: #adadad;
+    transform: translate(0px, 0px);
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.6);
   }
 
 
